@@ -1,15 +1,17 @@
+// SELEZIONO GLI INPUT TRAMITE ID
 // età utente element input
 const inputEtaElement= document.getElementById("name"); //Element
-console.log(inputEtaElement);
+// console.log(inputEtaElement);
 
 // numero chilometri element input
 const inputKmElement= document.getElementById("km"); //Element
-console.log(inputKmElement);
+// console.log(inputKmElement);
 
 // numero chilometri element input
 const inputSubmitElement= document.getElementById("submit"); //Element
-console.log(inputSubmitElement);
+// console.log(inputSubmitElement);
 
+// CREO DUE VARIABILI PER ETA E KM
 let eta= ""
 let km= ""
 
@@ -17,14 +19,14 @@ let km= ""
 
 inputSubmitElement.addEventListener("click", function () {
     // console.log("click");
-
+    
+    // RECUPERO IL VALORE INSERITI DALL'UTENTE ASSEGNANDO UNA VARIABILE
     // value eta
     eta= inputEtaElement.value; //number
-    
     // value km
     km= inputKmElement.value; //number
     
-    // prezzo biglietto in base ai chilometri
+    // CALCOLO DEL BIGLIETTO IN BASE AI KM
     const bigliettoBase= 0.21 * km; //number    
 
     // console.log(km, eta);
