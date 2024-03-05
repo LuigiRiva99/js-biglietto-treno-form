@@ -1,6 +1,8 @@
 // SELEZIONO GLI INPUT TRAMITE ID
 // submit element input
 const inputSubmitElement= document.getElementById("submit"); //Element
+// annulla element input
+const inputAnnElement= document.getElementById("annulla"); //Element
 // console.log(inputSubmitElement);
 
 // CREO DUE VARIABILI PER ETA E KM

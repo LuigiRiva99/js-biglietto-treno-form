@@ -1,0 +1,27 @@
+.container {
+    margin: 0 auto;
+    max-width: 920px;
+    text-align: center;
+}
+
+.app {
+    background-color: rgb(4, 95, 192);
+    padding: 30px;
+    color: white;
+    height: 100vh;
+}
+
+.main-title {
+    text-align: center;
+}
+
+.ms_ticket_select {
+    background-color: rgb(244, 84, 84);
+}
+
+
+
+/* .ticket_form {
+    display: flex;
+    justify-content: center;
+} */
