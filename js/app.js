@@ -1,13 +1,5 @@
 // SELEZIONO GLI INPUT TRAMITE ID
-// età utente element input
-const inputEtaElement= document.getElementById("name"); //Element
-// console.log(inputEtaElement);
-
-// numero chilometri element input
-const inputKmElement= document.getElementById("km"); //Element
-// console.log(inputKmElement);
-
-// numero chilometri element input
+// submit element input
 const inputSubmitElement= document.getElementById("submit"); //Element
 // console.log(inputSubmitElement);
 
@@ -19,6 +11,15 @@ let km= ""
 
 inputSubmitElement.addEventListener("click", function () {
     // console.log("click");
+
+    // SELEZIONO GLI INPUT TRAMITE ID
+    // età utente element input
+    const inputEtaElement= document.getElementById("name"); //Element
+    // console.log(inputEtaElement);
+
+    // numero chilometri element input
+    const inputKmElement= document.getElementById("km"); //Element
+    // console.log(inputKmElement);
     
     // RECUPERO IL VALORE INSERITI DALL'UTENTE ASSEGNANDO UNA VARIABILE
     // value eta
@@ -32,21 +33,26 @@ inputSubmitElement.addEventListener("click", function () {
     // console.log(km, eta);
 
     
-    if ( eta < 18) {
+    if ( eta === "minorenne") {
         // sconto minorenni del 20%
         const ScontoMinori= bigliettoBase * 0.2; //number
         // calcolo biglietto scontato
         const bigliettoMinori= (bigliettoBase - ScontoMinori).toFixed(2); //number
         
-        console.log(bigliettoMinori);
+        console.log("prezzo base: " + bigliettoBase + " €");
+        console.log("sconto minorenni: -" + ScontoMinori.toFixed(2) + "€" + " (20%)");
+        console.log("prezzo finale: " + bigliettoMinori + " €");
+        
 
-    } else if (eta > 65){
+    } else if (eta === "over65"){
         // sconto anziani del 40%
         const ScontoAnziani= bigliettoBase * 0.4; //number
         // calcolo biglietto scontato
         const bigliettoAnziani= (bigliettoBase - ScontoAnziani).toFixed(2);  //number
 
-        console.log(bigliettoAnziani);
+        console.log("prezzo base: " + bigliettoBase + " €");
+        console.log("sconto Over 65: -" + ScontoAnziani.toFixed(2) + "€" + " (40%)");
+        console.log("prezzo finale: " + bigliettoAnziani + " €");
     } else {
         console.log(bigliettoBase.toFixed(2));
     }
